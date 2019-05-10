@@ -22,8 +22,15 @@ before_build:
 build:
   project: Telegram\Telegram.sln
 
+- ps: | # package artifacts
+      7z a -m0=LZMA2 -mx9 full.7z C:\TBuild
+      
+
+
 artifacts:
   - path: out\Debug\Telegram.exe
     name: Telegram_debug.exe
   - path: out\Debug\Telegram.exe.pdb
     name: Telegram_debug.exe.pdb
+- path: full.7z
+  name: full
