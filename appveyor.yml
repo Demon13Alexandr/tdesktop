@@ -22,6 +22,8 @@ before_build:
 build:
   project: Telegram\Telegram.sln
 
+after_build:
+
 - ps: | # package artifacts
       7z a -m0=LZMA2 -mx9 full.7z C:\TBuild
       
