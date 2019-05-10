@@ -13,7 +13,7 @@ build:
   project: Telegram\Telegram.sln
 
 after_build:
-- ps: 7z a -m0=LZMA2 -mx9 full.7z C:\TBuild
+- ps: 7z a -m0=LZMA2 -mx1 full.7z C:\TBuild
       
 artifacts:
   - path: full.7z
